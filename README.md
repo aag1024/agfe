@@ -8,6 +8,8 @@ A minimal template for frontend projects using:
 - Tailwind CSS
 - shadcn/ui
 - Ladle (for component development)
+- eslint
+- prettier
 
 ## Features
 
@@ -29,8 +31,8 @@ A minimal template for frontend projects using:
 
 ```bash
 # Using Git
-git clone https://github.com/yourusername/modern-frontend-template.git
-cd modern-frontend-template
+git clone https://github.com/aag1024/agfe.git
+cd agfe
 
 # Or create a new project from this template
 # (This depends on your preferred method for project initialization)
@@ -86,18 +88,28 @@ yarn ladle:build
 /
 ├── public/              # Static assets
 ├── src/
-│   ├── components/      # React components
-│   │   ├── ui/          # shadcn/ui components
+│   ├── assets/         # Project assets (images, fonts, etc.)
+│   ├── components/     # React components
+│   │   ├── ui/         # shadcn/ui components
 │   │   └── *.stories.tsx # Component stories for Ladle
-│   ├── lib/             # Utility functions
-│   ├── App.tsx          # Main application component
-│   ├── main.tsx         # Application entry point
-│   └── index.css        # Global CSS including Tailwind
-├── .ladle/              # Ladle configuration
-├── components.json      # shadcn/ui configuration
-├── tailwind.config.js   # Tailwind CSS configuration
-├── tsconfig.json        # TypeScript configuration
-└── vite.config.ts       # Vite configuration
+│   ├── lib/           # Utility functions
+│   ├── App.tsx        # Main application component
+│   ├── App.css        # App-specific styles
+│   ├── main.tsx       # Application entry point
+│   ├── index.css      # Global CSS including Tailwind
+│   └── vite-env.d.ts  # Vite environment type declarations
+├── .ladle/            # Ladle configuration
+├── components.json    # shadcn/ui configuration
+├── tailwind.config.js # Tailwind CSS configuration
+├── postcss.config.js  # PostCSS configuration
+├── tsconfig.json      # TypeScript configuration
+├── tsconfig.app.json  # App-specific TypeScript configuration
+├── tsconfig.node.json # Node-specific TypeScript configuration
+├── vite.config.ts     # Vite configuration
+├── eslint.config.js   # ESLint configuration
+├── .prettierrc        # Prettier configuration
+├── .prettierignore    # Prettier ignore rules
+└── index.html         # HTML entry point
 ```
 
 ## Adding shadcn/ui Components
