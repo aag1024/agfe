@@ -105,7 +105,7 @@ yarn ladle:build
 This template includes a few shadcn/ui components already. To add more components:
 
 ```bash
-npx shadcn-ui add [component-name]
+npx shadcn add [component-name]
 ```
 
 For example:
